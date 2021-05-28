@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
+    "jsonpath": "^1.1.1",
     "marked": "^2.0.6",
     "minimize": "2.2.x",
     "nunjucks": "^3.2.1",
@@ -23,7 +24,10 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^1.19.1"
+    "npm-force-resolutions": "0.0.10",
+    "prettier": "^1.19.1",
+    "json-ptr": "2.1.0",
+    "underscore": "1.12.1"
   },
   "homepage": "https://github.com/raml2html/raml2html",
   "keywords": [
@@ -36,8 +40,13 @@
     "url": "git://github.com/raml2html/raml2html.git"
   },
   "preferGlobal": true,
+  "resolutions": {
+    "json-ptr": "2.1.0",
+    "underscore": "1.12.1"
+  },
   "scripts": {
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "preinstall": "npx npm-force-resolutions"
   },
   "bin": {
     "raml2html": "./bin/raml2html"
